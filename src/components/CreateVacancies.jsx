@@ -2,16 +2,19 @@
 import '../App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-export default ({story}) => {
+export default ({card}) => {
     return (
       <>
-          <div class="col p-3">
-            <div class="card" style= {{width: "18rem"}}>
-              <div class="card-body p-0">
-                <h5 class="card-title text-center">{story.title}</h5>
-                <p class="card-text">{story.requisitos}</p>
-                <p class="card-text">{story.empresa}</p>
-                <p class="card-text">{story.salario}</p>
+          <div className="col p-3">
+            <div className="card" style= {{width: "18rem"}}>
+              <div className="card-body p-0">
+                <h5 className="card-title text-center">{card.title}</h5>
+                <img src={card.img} className="card-img-top"  width="590" height="250"alt="..."/> 
+                <p>Requisitos necessários:</p>
+                <p className="card-text">{card.requisitos}</p>
+                <p className="card-text">empresa:{card.empresa}</p>
+                <p className="card-text">Faixa salarial:{card.salario}</p>
+                <bottom class= "text-center btn btn-primary botao" style={{backgroundColor: "#245B86", marginBottom: "10px", textAlign:"center !important"}}>Ver vaga</bottom>
               </div>
             </div>
           </div>
